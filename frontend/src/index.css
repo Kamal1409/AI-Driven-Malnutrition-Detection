@@ -1,0 +1,43 @@
+/* index.css - global reset + background */
+:root{
+  --bg-start: #eef5ff;
+  --bg-end: #eef2ff;
+  --card-bg: #ffffff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --radius: 14px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+* { box-sizing: border-box; }
+html,body,#root { height:100%; margin:0; }
+body {
+  background: linear-gradient(180deg, rgba(238,245,255,1) 0%, rgba(238,242,255,1) 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  color:#0f172a;
+  line-height:1.45;
+}
+
+/* container */
+.app-container {
+  max-width:1200px;
+  margin:32px auto;
+  padding:28px;
+}
+
+/* header */
+.header {
+  text-align:center;
+  margin-bottom:28px;
+}
+.h-title { font-size:34px; font-weight:700; margin:0; color:#0f172a; }
+.h-sub { margin-top:8px; color:var(--muted); font-size:15px; }
+
+/* responsive grid */
+.grid {
+  display:grid;
+  gap:24px;
+  grid-template-columns: 1fr;
+}
+@media(min-width:980px){ .grid { grid-template-columns: 1fr 1fr; } }
